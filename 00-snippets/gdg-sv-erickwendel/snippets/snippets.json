@@ -1,0 +1,150 @@
+{
+    "Create a main function": {
+        "prefix": "gdgsv:main",
+        "body": [
+            ";",
+            "(async () => {",
+            "\t$0",
+            "\n",
+            "})()"
+
+        ],
+        "description": "Create a main function"
+    },
+    "Start test case": {
+        "prefix": "gdgsv:describe:init",
+        "body": [
+            "describe('${1:My test suite}', () => {",
+            "\tit('${2:my description}', () => {",
+            "\t\tconst expected = $3",
+            "\t\tconst actual = $4",
+            "\t\tequal(actual, expected)",
+            "\t})",
+            "})"
+        ],
+        "description": "Create a Test structure"
+    },
+    "Import assert": {
+        "prefix": "gdgsv:import:assert",
+        "body": [
+            "import { equal } from 'assert'\n"
+        ],
+        "description": "TS: Import the equal module from assert"
+    },
+
+    "TypeOf isNan": {
+        "prefix": "gdgsv:typeof:isnan",
+        "body": [
+            "if(isNaN(${1:number1}) || isNaN(${2:number2}))",
+            "\tthrow Error('${3:invalid argument!}')\n\n$0"
+        ],
+        "description": "JS: Verify if number is a true number"
+    },
+    "TypeOf String": {
+        "prefix": "gdgsv:typeof:string",
+        "body": [
+            "if(typeof(${1:number1}) === 'string')",
+            "\t$1 = parseInt($1)\n\n$0"
+        ],
+        "description": "JS: Convert a number to string"
+    },
+    "Sum Function": {
+        "prefix": "gdgsv:fn:sum",
+        "body": [
+            "function sum (${1:number1}, ${2:number2}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "JS: Convert a number to string"
+    },
+    "Create a simple class": {
+        "prefix": "gdgsv:class",
+        "body": [
+            "export class Class${1:1} {",
+            "\tconstructor(){",
+            "\t\t${2}",
+            "\t}",
+            "\tstatic method$1():void {",
+            "\t\tconsole.log('Hi from $1')",
+            "\t}",
+            "}"
+
+        ],
+        "description": "TS: Convert a number to string"
+    },
+    "Import a directory file": {
+        "prefix": "gdgsv:import:class",
+        "body": [
+            "import { Class${1:1} } from './Class${1:1}'\n"
+
+        ],
+        "description": "TS: Convert a number to string"
+    },
+    "Generics: Create entities": {
+        "prefix": "gdgsv:class:member",
+        "body": [
+            "class $1 {",
+            "\tpublic name: string = ''",
+            "}\n$0"
+        ],
+        "description": "TS: Entities"
+    },
+    "Create an Interface": {
+        "prefix": "gdgsv:generics:interface",
+        "body": [
+            "interface Hero<T> {",
+            "\tcreate(item: T): Boolean ",
+            "}"
+        ],
+        "description": "TS: Convert a number to string"
+    },
+    "Create an Abstract": {
+        "prefix": "gdgsv:generics:base",
+        "body": [
+            "abstract class BaseHero <T> implements Hero <T> {",
+            "\tpublic database: T[] = []",
+            "\tcreate(item: T) {",
+            "\t\tconsole.log('creating..', item)",
+            "\t\tthis.database.push(item)",
+            "\t\treturn true",
+            "\t}",
+            "}"
+        ],
+        "description": "TS: Convert a number to string"
+    },
+    "Create warrior and mage classes": {
+        "prefix": "gdgsv:class:child",
+        "body": [
+            "class $1Svc extends BaseHero<$1> {",
+            "\t$2",
+            "}"
+        ],
+        "description": "TS: Entities"
+    },
+    
+    "Create list function": {
+        "prefix": "gdgsv:list:mage",
+        "body": [
+            "list(): Mage[] {",
+            "\treturn this.database",
+            "}"
+        ],
+        "description": "TS: Create list function"
+    },
+
+    "Create execution": {
+        "prefix": "gdgsv:generics:execute",
+        "body": [
+            "const ${1:var1} = new ${2}Svc()",
+            "$1.create(<$2> {",
+            "\tname: 'Samurai Jack'",
+            "})",
+            "const ${3:var2} = new ${4}Svc()",
+            "$3.create(<$4> {",
+            "\t\tname: 'Zantex'",
+            "})\n",
+            "console.log('$4', 'final result: ', $3.list())"
+        ],
+        "description": "TS: boilerplate execution"
+    }
+}

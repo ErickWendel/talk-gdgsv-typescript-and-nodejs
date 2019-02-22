@@ -24,14 +24,29 @@
         ],
         "description": "Create a Test structure"
     },
-    "Import assert": {
-        "prefix": "gdgsv:import:assert",
+    "Import assert in TS": {
+        "prefix": "gdgsv:ts:import:assert",
         "body": [
             "import { equal } from 'assert'\n"
         ],
         "description": "TS: Import the equal module from assert"
     },
-
+    "Sum Function in TS": {
+        "prefix": "gdgsv:ts:fn:sum",
+        "body": [
+            "function sum (${1:number1}:number, ${2:number2}:number): number {",
+            "\treturn $1 + $2",
+            "}"
+        ],
+        "description": "TS: Convert a number to string"
+    },
+    "Import assert in JS": {
+        "prefix": "gdgsv:js:import:assert",
+        "body": [
+            "const { equal } = require('assert')\n"
+        ],
+        "description": "JS: Import the equal module from assert"
+    },
     "TypeOf isNan": {
         "prefix": "gdgsv:typeof:isnan",
         "body": [
@@ -48,11 +63,12 @@
         ],
         "description": "JS: Convert a number to string"
     },
-    "Sum Function": {
-        "prefix": "gdgsv:fn:sum",
+    "Sum Function in JS": {
+        "prefix": "gdgsv:js:fn:sum",
         "body": [
             "function sum (${1:number1}, ${2:number2}) {",
-            "\t$0",
+            "\n",
+            "\treturn $1 + $2",
             "}"
         ],
         "description": "JS: Convert a number to string"

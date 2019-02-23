@@ -74,7 +74,7 @@
         "description": "JS: Convert a number to string"
     },
     "Create a simple class": {
-        "prefix": "gdgsv:class",
+        "prefix": "gdgsv:class:new",
         "body": [
             "export class Class${1:1} {",
             "\tstatic method$1():void {",

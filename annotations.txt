@@ -7,6 +7,24 @@ The power of Typescript to work with Node.js Applications
     - Array(7).join('mvpconf ' -2) + ' Batman'
     - Funny Javascript Mistakes
     - 5 Mistakes
+        - 9999999999999999 (16x)
+        // 10000
+        - true + 2 
+        // 2 
+        - '21' + true
+        //21true
+        - "b" + "a" + +"a" + "a"; 
+        // 20
+        - '21' - - 1
+        // 22
+        - 0.1 + 0.2 === 0.3
+        // 0.30000000000000004 | false
+        - 3 > 2 > 1
+        // false
+        - 3 > 2 >= 1
+        // true
+
+        
 
 - Introduction to Typescript
     - Programming Language
@@ -55,4 +73,3 @@ The power of Typescript to work with Node.js Applications
 
 https://github.com/denysdovhan/wtfjs
 https://www.typescriptlang.org/
-https://docs.google.com/presentation/u/1/d/1gz_oLBwCBOEt2hbZnZdxd6C1wPRaLBK_vSE_dq0temU/edit?ouid=101989275647753313987&usp=slides_home&ths=true

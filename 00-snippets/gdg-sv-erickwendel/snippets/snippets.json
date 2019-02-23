@@ -77,11 +77,9 @@
         "prefix": "gdgsv:class",
         "body": [
             "export class Class${1:1} {",
-            "\tconstructor(){",
-            "\t\t${2}",
-            "\t}",
             "\tstatic method$1():void {",
             "\t\tconsole.log('Hi from $1')",
+            "\t\t${2}",
             "\t}",
             "}"
 
